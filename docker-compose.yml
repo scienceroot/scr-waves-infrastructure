@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  waves: 
+    build: ./container
+    volumes:
+      - ./data:/data
+      - ./conf:/conf
+    environment:
+      - SCR_WALLET_PW='scr_secret_password_123'
+      - SCR_WALLET_SEED='VcaWgC9PXStZXz3'
+      - SCR_WAVES_DIR=/data
+
+networks:
+    default:
+        external:
+          name: nginx-network
