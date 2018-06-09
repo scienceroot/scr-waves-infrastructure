@@ -12,6 +12,8 @@ services:
       - SCR_WAVES_DIR=/data
   explorer:
     build: ./WavesExplorerLite
+    ports:
+      - "4200:80"
 
 networks:
     default:
