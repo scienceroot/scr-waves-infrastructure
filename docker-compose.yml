@@ -10,6 +10,8 @@ services:
       - SCR_WALLET_PW='scr_secret_password_123'
       - SCR_WALLET_SEED='VcaWgC9PXStZXz3'
       - SCR_WAVES_DIR=/data
+  explorer:
+    build: ./WavesExplorerLite
 
 networks:
     default:
