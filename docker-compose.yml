@@ -3,6 +3,7 @@ version: '2'
 services:
   waves: 
     build: ./container
+    restart: always
     volumes:
       - ./data:/data
       - ./conf:/conf
@@ -12,8 +13,6 @@ services:
       - SCR_WAVES_DIR=/data
   explorer:
     build: ./WavesExplorerLite
-    ports:
-      - "4200:80"
 
 networks:
     default:
